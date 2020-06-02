@@ -15,23 +15,34 @@ let count = 1;
 // function ADD-TO-DO List
 function add_to_do(todo) {
   // add todo to localstorage
+  let k = 1;
   const Class = "incomplete";
-  // saveLocalTodos(todo, Class, count);
   let todos;
   if (localStorage.getItem("todos") === null) {
     todos = [];
   } else {
     todos = JSON.parse(localStorage.getItem("todos"));
   }
-  const data = ` <li class="${Class}" id="${todos.length + 1}" name="${todo}">
-    <i class="far fa-circle" id="${count}" job="complete"></i>
+  if (todos.length > 0) {
+    todos.forEach(function (todo) {
+      // console.log(todo.id);
+      if (todo.id > k) {
+        k = todo.id;
+      }
+    });
+  }
+  console.log(k);
+  let b = Date.now();
+  console.log(b);
+  const data = ` <li class="${Class}" id="${b}" name="${todo}">
+    <i class="far fa-circle" id="${b}" job="complete"></i>
     <p><input type="text" class="todo_element" id="two" value="${todo}" readonly="true"  ondblclick="this.readOnly='';" onblur="this.readOnly='true';" /></p>
     <i class="fas fa-times" id="three" job="delete"></i>
   </li>`;
   const position = "beforeend";
   LIST.insertAdjacentHTML(position, data);
-  saveLocalTodos(todo, Class, count);
-  count += 1;
+  saveLocalTodos(todo, Class, b);
+  // count += 1;
   down();
   // changing display of footer to grid if todos has atlest one item
   FOOTER.style.display = "grid";
@@ -141,7 +152,7 @@ function saveLocalTodos(todo, Class, count) {
   } else {
     todos = JSON.parse(localStorage.getItem("todos"));
   }
-  todos.push({ name: todo, Class_Name: Class, id: todos.length + 1 });
+  todos.push({ name: todo, Class_Name: Class, id: count });
   localStorage.setItem("todos", JSON.stringify(todos));
 }
 
