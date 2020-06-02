@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: gainsboro;
+}
+
+header {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  height: 200px;
+  font-size: 4vw;
+  color: rgb(207, 156, 78);
+  opacity: 0.4;
+}
+
+.add-to-do {
+  /* margin-top: 100px; */
+  display: grid;
+  justify-items: center;
+}
+
+input {
+  height: 30px;
+  width: 20vw;
+  border: none;
+  font-size: 1.5vw;
+}
+
+.input-data {
+  background-color: white;
+  height: 50px;
+  width: 40vw;
+  display: grid;
+  align-items: center;
+  justify-content: space-around;
+  grid-template-columns: 3% 50% 3%;
+}
+
+.item_input {
+  font-size: 1.8vw;
+}
+
+.list {
+  list-style: none;
+}
+
+.list li {
+  margin: 3px 0px;
+  background-color: white;
+  height: 50px;
+  width: 40vw;
+  display: grid;
+  align-items: center;
+  justify-content: space-around;
+  grid-template-columns: 3% 50% 3%;
+  font-family: "Tenali Ramakrishna", sans-serif;
+}
+
+.completed .todo_element {
+  text-decoration: line-through;
+}
+
+div.footer {
+  margin-top: 1px;
+  display: grid;
+  /* grid-template-columns: 20% 50% 30%; */
+  grid-template-columns: 20% 45% 25%;
+  background-color: white;
+  height: 50px;
+  width: 40vw;
+  font-size: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.down-list {
+  display: grid;
+  grid-template-columns: 30% 30% 40%;
+  background-color: white;
+  align-items: center;
+  justify-items: start;
+}
+.down-list button {
+  border: none;
+  height: 30px;
+  font-size: 1.8vw;
+  background-color: white;
+  font-family: "Tenali Ramakrishna", sans-serif;
+}
+
+.left {
+  font-size: 1.8vw;
+  color: gray;
+  font-family: "Tenali Ramakrishna", sans-serif;
+}
+
+.completed p {
+  color: gray;
+}
+
+.Clear_completed {
+  border: none;
+  height: 30px;
+  font-size: 1.6vw;
+  background-color: white;
+  font-family: "Tenali Ramakrishna", sans-serif;
+
+  visibility: hidden;
+}
+
+div.footer {
+  display: none;
+}
+
+.todo_element {
+  background: none;
+  font-family: "Tenali Ramakrishna", sans-serif;
+  font-size: 2vw;
+}

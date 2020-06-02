@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/84701b1236.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Rahul's To-Do App</title>
+  </head>
+  <body>
+    <header>
+      <h1>todos</h1>
+    </header>
+    <div class="container">
+      <div class="add-to-do">
+        <div class="input-data">
+          <i class="fas fa-chevron-down" id="not-select"></i>
+          <input type="text" id="input" placeholder="What needs to be done?" />
+        </div>
+        <div class="ul-data">
+          <ul class="list"></ul>
+        </div>
+        <div class="footer">
+          <p class="left"></p>
+          <div class="down-list">
+            <button class="All">All</button>
+            <button class="Active">Active</button>
+            <button class="Completed">Completed</button>
+          </div>
+          <button class="Clear_completed">Clear completed</button>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+    <!-- <input type="text" class="item_input" value="sport" disabled /> -->
+  </body>
+</html>
